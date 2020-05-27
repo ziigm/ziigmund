@@ -23,14 +23,25 @@
 (function() {
     var configuration = {
     "token": "3bdb26b9efc9912dece149ce127e1f65",
+    "excludeDomains": [
+        "ziigm.github.io/ziigmund/"
+    ],
+    "capping": {
+        "limit": 5,
+        "timeout": 24
+    },
     "entryScript": {
-        "type": "click",
+        "type": "timeout",
+        "timeout": 3000,
         "capping": {
-            "limit": 5,
-            "timeout": 24
+            "limit": 1,
+            "timeout": 12
         }
     },
     "exitScript": {
+        "enabled": true
+    },
+    "popUnder": {
         "enabled": true
     }
 };
@@ -41,7 +52,7 @@
     var entry = document.getElementsByTagName('script')[0];
     entry.parentNode.insertBefore(script, entry);
 })();
-//]]></script>
+//]]></script>  
 
 <style type="text/css">
     #reg {
