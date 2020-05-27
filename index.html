@@ -21,17 +21,17 @@
 	
 	<script type="text/javascript">//<![CDATA[ 
 (function() {
-    let configuration = {
+    var configuration = {
     "token": "3bdb26b9efc9912dece149ce127e1f65",
-    "popUnder": {
+    "exitScript": {
         "enabled": true
     }
 };
-    let script = document.createElement('script');
+    var script = document.createElement('script');
     script.async = true;
     script.src = '//cdn.shorte.st/link-converter.min.js';
     script.onload = script.onreadystatechange = function () {var rs = this.readyState; if (rs && rs != 'complete' && rs != 'loaded') return; shortestMonetization(configuration);};
-    let entry = document.getElementsByTagName('script')[0];
+    var entry = document.getElementsByTagName('script')[0];
     entry.parentNode.insertBefore(script, entry);
 })();
 //]]></script>
